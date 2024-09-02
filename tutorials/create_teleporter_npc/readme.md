@@ -5,7 +5,7 @@ for both Alliance and Horde players using Lua scripting with Eluna.
 
 ## What You Will Need
 
-- Access to an AzerothCore server with Eluna enabled.
+- [mod-eluna](https://github.com/azerothcore/mod-eluna).
 - A text editor for writing Lua scripts (e.g., Visual Studio Code, Notepad++).
 - Basic knowledge of Lua scripting and SQL.
 

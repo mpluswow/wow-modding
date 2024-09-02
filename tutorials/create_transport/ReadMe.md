@@ -4,17 +4,6 @@ This guide provides step-by-step instructions on how to set up and modify transp
 Transports in WoW are special game objects that move along predefined paths, enabling player movement across different locations. 
 These transports, such as ships and zeppelins, are integral for water and air travel in the game.
 
-## Table of Contents
-- [What Are Transports in WoW?](#what-are-transports-in-wow)
-- [What You Will Need](#what-you-will-need)
-- [Working with `taxinodes_dbc`](#working-with-taxinodes_dbc)
-- [Defining Paths with `taxipath_dbc`](#defining-paths-with-taxipath_dbc)
-- [Setting Waypoints with `taxipathnode_dbc`](#setting-waypoints-with-taxipathnode_dbc)
-- [Tips for Creating Transport Paths](#tips-for-creating-transport-paths)
-- [Creating the Game Object (`acore_world.gameobject_template`)](#creating-the-game-object-acore_worldgameobject_template)
-- [Adding the Transport (`acore_world.transports`)](#adding-the-transport-acore_worldtransports)
-- [Example SQL](#example-sql)
-
 ## What Are Transports in WoW?
 
 Transports in WoW are special game objects that move along predefined paths specified in the DBC files. 

@@ -17,36 +17,40 @@ These transports, such as ships and zeppelins, are integral for water and air tr
 
 ## What Are Transports in WoW?
 
-Transports in WoW are special game objects that move along predefined paths specified in the DataBaseClient files. 
+Transports in WoW are special game objects that move along predefined paths specified in the DBC files. 
 These transports allow players to move with them until they disembark. 
 There are about 20 blizzlike transports in a typical WoW server setup, primarily used for water and air travel. 
 Ground transport is less common due to system limitations. 
-When using AzerothCore, we can add one using DataBase instead.
+When using AzerothCore, we can add one using the database instead.
 
 ## What You Will Need
 
 To set up or modify transports, you will need:
 
 - A MySQL database editor.
-- The following SQL-DBC files:
+- The following SQL-DBC tables:
   - `taxinodes_dbc`
   - `taxipath_dbc`
-  - `taxipathnode.dbc`
+  - `taxipathnode_dbc`
 
 ## Working with `taxinodes_dbc`
 
-The `taxinodes_dbc` file defines the destinations, like docks, but not the actual paths that transports will follow. The coordinates (X, Y, Z) define the location, and the name is for reference. The last two columns, which specify the entry of the creature used as the mount for the taxi path, are not relevant for transports and can be left empty.
+The `taxinodes_dbc` table defines the destinations, like docks, but not the actual paths that transports will follow. 
+The coordinates (X, Y, Z) define the location, and the name is for reference. 
+The last two columns, which specify the entry of the creature used as the mount for the taxi path, are not relevant for transports and can be left empty.
 
 ## Defining Paths with `taxipath_dbc`
 
-The `taxipath_dbc` file connects two TaxiNodes. To define a path:
+The `taxipath_dbc` table connects two TaxiNodes. 
+To define a path:
+
 - Create a new row with the entries of the two nodes you want to connect.
 - The last column specifies the price for the taxi ride, but this value doesn’t affect transports.
 - Although each TaxiPath connects only two TaxiNodes, your transport can stop at multiple points along the path.
 
 ## Setting Waypoints with `taxipathnode_dbc`
 
-The `taxipathnode_dbc` file is where you define the path the transport will follow. This includes:
+The `taxipathnode_dbc` table is where you define the path the transport will follow. This includes:
 - Entering the ID of the TaxiPath.
 - The coordinates (X, Y, Z) for each waypoint.
 - Assigning a unique point ID for each waypoint to avoid client or server crashes.
@@ -81,7 +85,6 @@ Create a new row with a unique GUID, enter the entry of your transport game obje
 Once added, the transport should be operational, though fine-tuning might be necessary to ensure smooth operation.
 
 ## Example SQL
-
 ```sql
 -- Insert a new taxi node into taxinodes_dbc
 INSERT INTO taxinodes_dbc (
@@ -102,7 +105,7 @@ INSERT INTO taxinodes_dbc (
     81.88,                -- Z coordinate for Northshire Abbey
     'Northshire Abbey',   -- Name displayed for the taxi node in the English (US) client
     'Northshire Abbey',   -- Name displayed for the taxi node in the English (GB) client
-    15635,                -- Ground mount ID (typically set to a gryphon or wyvern for Alliance/Horde respectively)
+    0,                    -- Ground mount ID (set to 0 for ships/zeppelins)
     0                     -- Flying mount ID (0 because it’s not needed for a ship)
 );
 
@@ -143,7 +146,8 @@ INSERT INTO taxipathnode_dbc (
     LocZ                  -- Z coordinate of the waypoint
 ) VALUES
     (46875, 1979, 0, 0, -8833.38, 626.07, 94.06),  -- The first waypoint (start at Stormwind dock)
-    (46876, 1979, 1, 0, -8913.23, -188.49, 81.88); -- The second waypoint (arrival at Northshire Abbey)
+    (46876, 1979, 1, 0, -8870.00, 218.00, 85.00),  -- The second waypoint (mid-point between Stormwind and Northshire Abbey)
+    (46877, 1979, 2, 0, -8913.23, -188.49, 81.88); -- The third waypoint (arrival at Northshire Abbey)
 
 -- Define the waypoints for the return path from Northshire Abbey to Stormwind in taxipathnode_dbc
 INSERT INTO taxipathnode_dbc (
@@ -155,5 +159,6 @@ INSERT INTO taxipathnode_dbc (
     LocY,                 -- Y coordinate of the waypoint
     LocZ                  -- Z coordinate of the waypoint
 ) VALUES
-    (46877, 1980, 0, 0, -8913.23, -188.49, 81.88), -- The first waypoint (start at Northshire Abbey)
-    (46878, 1980, 1, 0, -8833.38, 626.07, 94.06);  -- The second waypoint (arrival at Stormwind dock)
+    (46878, 1980, 0, 0, -8913.23, -188.49, 81.88), -- The first waypoint (start at Northshire Abbey)
+    (46879, 1980, 1, 0, -8870.00, 218.00, 85.00),  -- The second waypoint (mid-point between Northshire Abbey and Stormwind)
+    (46880, 1980, 2, 0, -8833.38, 626.07, 94.06);  -- The third waypoint (arrival at Stormwind dock)

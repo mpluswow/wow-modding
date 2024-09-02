@@ -1,6 +1,6 @@
 ## Table of Contents
 
-- [Create In-Game Transport](tutorials/setup_instructions/ReadMe.md)  
+- [Create In-Game Transport](tutorials/create_transport/ReadMe.md)  
   *Guide to creating custom transport systems such as taxinodes, ships, trains, and zeppelins.*
 
 - [Create Teleporter NPC](tutorials/create_teleporter_npc/ReadMe.md)  

@@ -2,7 +2,7 @@
 
 This repository contains a Bash script that automates the setup and installation of `AzerothCore`.
 
-You can add module repository liks that You want to install, by editing `ac-instal.sh` script. 
+You can clone Modules that You want to install by editing `ac-instal.sh` adding rapository URL links. 
 
 Modules `mod-ah-bot`, `mod-eluna`, and `mod-transmog` are just an example, feel fre to change it.
 

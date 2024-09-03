@@ -1,5 +1,8 @@
 ## Table of Contents
 
+- [Installation: Linux](tutorials/_installation_linux/ReadMe.md)  
+  *Bash script to install AzerothCore with Modules*
+
 - [Create In-Game Transport](tutorials/create_transport/ReadMe.md)  
   *Guide to creating custom transport systems such as taxinodes, ships, trains, and zeppelins.*
 

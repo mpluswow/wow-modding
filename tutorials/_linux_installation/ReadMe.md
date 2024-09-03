@@ -1,8 +1,8 @@
 ### AzerothCore Installation Script
 
-This repository contains a Bash script that automates the setup and installation of `AzerothCore`, along with the modules.
-You can add modules simply by editing this script and providing mod repository link. 
-Modules `mod-ah-bot`, `mod-eluna`, and `mod-transmog` are just an example.
+This repository contains a Bash script that automates the setup and installation of `AzerothCore`.
+You can add module repository liks that You want to install, by editing `ac-instal.sh` script. 
+Modules `mod-ah-bot`, `mod-eluna`, and `mod-transmog` are just an example, feel fre to change it.
 
 ### Usage:
 ```bash

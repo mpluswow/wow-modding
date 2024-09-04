@@ -11,7 +11,7 @@ Website: https://trinitycore.org/
 
 ## Table of Contents
 
-- [Installation: Linux](tutorials/_installation_linux/ReadMe.md)  
+- [Installation: Linux](tutorials/_linux_installation/ReadMe.md)  
   *Bash script to install AzerothCore with Modules*
 
 - [Create In-Game Transport](tutorials/create_transport/ReadMe.md)  

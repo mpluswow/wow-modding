@@ -1,13 +1,16 @@
 ### WoW Modding Community
 Discord: https://discord.gg/P4mpVGDpT2
+
 Website: https://www.wowmodding.net/
 
 ### AzerothCore 3.3.5a
 Website: https://www.azerothcore.org/
+
 SourceCode: https://github.com/azerothcore/azerothcore-wotlk
 
 ### TrinityCore (master = Retail 11.0.2.56421, 3.3.5 = WOTLK 3.3.5a, WOTLK Classic = 3.4.3.54261, Cata Classic = 4.4.0.55262)
 Website: https://trinitycore.org/
+
 SourceCode: https://github.com/TrinityCore/TrinityCore
 
 ## Table of Contents

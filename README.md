@@ -3,15 +3,11 @@ Discord: https://discord.gg/P4mpVGDpT2
 
 Website: https://www.wowmodding.net/
 
-### AzerothCore 3.3.5a
+### AzerothCore (master= 3.3.5a-12340)
 Website: https://www.azerothcore.org/
 
-SourceCode: https://github.com/azerothcore/azerothcore-wotlk
-
-### TrinityCore (master= Retail 11.0.2.56421, 3.3.5= WOTLK 3.3.5a, CataClassic= 4.4.0.55262)
+### TrinityCore (master= Retail-11.0.2.56421)
 Website: https://trinitycore.org/
-
-SourceCode: https://github.com/TrinityCore/TrinityCore
 
 ## Table of Contents
 

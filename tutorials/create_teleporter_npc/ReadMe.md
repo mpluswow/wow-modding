@@ -20,15 +20,13 @@ First, define the model for the NPC in the `creature_model_info` table:
 ```sql
 INSERT INTO `creature_template_model` (
     `CreatureID`,
-    `Idx`,
     `CreatureDisplayID`,
     `DisplayScale`,
     `Probability`,
     `VerifiedBuild`
 ) VALUES (
     60000,         -- CreatureID from `creature_template`
-    0,             -- Default model
-    12345,         -- Model ID for the portal (replace with actual ID)
+    12345,         -- Model ID (replace with actual ID)
     1.0,           -- Scale
     1.0,           -- Probability (always use this model)
     NULL           -- Verified build (optional)

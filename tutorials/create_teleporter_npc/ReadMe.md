@@ -68,7 +68,7 @@ INSERT INTO creature_template (
     1.0,                      -- Scale
     0,                        -- Rank (0 = Normal)
     '',                       -- AIName (leave blank)
-    'city_teleporter.lua'     -- ScriptName (match with your Lua script name)
+    ''     -- ScriptName (match with your Lua script name)
 );
 ```
 ### Step 2: Writing the Lua Script

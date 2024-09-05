@@ -1,8 +1,8 @@
-###GuildWars System SQL Script
+### GuildWars System SQL Script
 
 This SQL script sets up the necessary structure for a guild-based leveling system in the game. It allows guild members to complete tasks to earn XP and level up their guild. As guilds progress, they unlock rewards such as gold and items. The script creates tables for storing guild levels, tasks, and the XP required for leveling.
 
-###1. Database Creation
+### 1. Database Creation
 The script begins by creating a database named `dreamforge`:
 
 ```sql
@@ -14,7 +14,7 @@ USE dreamforge;
 ```
 This command selects the dreamforge database so that all subsequent operations are performed within it.
 
-2. Table Definitions
+### 2. Table Definitions
 a. `guildwars_level_bracket`
 This table defines the guild leveling system. Each row represents a guild level and contains the following fields:
 
@@ -39,7 +39,7 @@ This table tracks each guild’s progress by storing the guild’s current level
 `guild_level`: The current level of the guild (default is level 1).
 `current_xp`: The current amount of XP that the guild has accumulated.
 
-###3. Data Insertion
+### 3. Data Insertion
 
 a. `guildwars_level_bracket`
 
@@ -56,7 +56,7 @@ The script also inserts a set of general task templates, such as:
 `Collect Rare Item`: Rewards `80 XP` for collecting any Rare Item.
 `Complete Dungeon`: Rewards `150 XP` for completing any Dungeon.
 
-###4. Adjustments for XP Scaling
+### 4. Adjustments for XP Scaling
 
 The XP rewards are kept at lower values to ensure that guilds do not level up too quickly, encouraging a gradual progression system. For example, 
 killing any creature awards only `50 XP`, ensuring that it takes more time and effort to reach higher guild levels.

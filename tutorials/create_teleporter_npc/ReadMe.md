@@ -25,8 +25,8 @@ INSERT INTO `creature_template_model` (
     `Probability`,
     `VerifiedBuild`
 ) VALUES (
-    60000,         -- CreatureID from `creature_template`
-    12345,         -- Model ID (replace with actual ID)
+    600000,         -- CreatureID from `creature_template`
+    28089,         -- Model ID 
     1.0,           -- Scale
     1.0,           -- Probability (always use this model)
     NULL           -- Verified build (optional)
@@ -79,22 +79,27 @@ Create a new Lua script file named city_teleporter.lua in your Eluna scripts dir
 Insert the following Lua script into city_teleporter.lua:
 
 ```lua
-local NPC_ID = 60000  -- NPC entry ID
+local NPC_ID = 600000  -- NPC entry ID
 
 -- Function to display the gossip menu
 function OnGossipHello(event, player, creature)
     player:GossipClearMenu()  -- Clear any existing menu
     
     if player:IsAlliance() then
-        player:GossipMenuAddItem(0, "Teleport to Stormwind", 1, 1)
-        player:GossipMenuAddItem(0, "Teleport to Ironforge", 1, 2)
-        player:GossipMenuAddItem(0, "Teleport to Darnassus", 1, 3)
-        player:GossipMenuAddItem(0, "Teleport to The Exodar", 1, 4)
+        player:GossipMenuAddItem(2, "|TInterface\\Icons\\inv_misc_rune_01:30|t Teleport to Stormwind", 1, 1)  -- Icon for Stormwind
+        player:GossipMenuAddItem(2, "|TInterface\\Icons\\achievement_boss_ragnaros:30|t Teleport to Ironforge", 1, 2)  -- Icon for Ironforge
+        player:GossipMenuAddItem(2, "|TInterface\\Icons\\inv_misc_rune_07:30|t Teleport to Darnassus", 1, 3)  -- Icon for Darnassus
+        player:GossipMenuAddItem(2, "|TInterface\\Icons\\inv_misc_rune_10:30|t Teleport to The Exodar", 1, 4)  -- Icon for Exodar
     elseif player:IsHorde() then
-        player:GossipMenuAddItem(0, "Teleport to Orgrimmar", 1, 5)
-        player:GossipMenuAddItem(0, "Teleport to Thunder Bluff", 1, 6)
-        player:GossipMenuAddItem(0, "Teleport to Undercity", 1, 7)
-        player:GossipMenuAddItem(0, "Teleport to Silvermoon City", 1, 8)
+        player:GossipMenuAddItem(2, "|TInterface\\Icons\\inv_misc_rune_05:30|t Teleport to Orgrimmar", 1, 5)  -- Icon for Orgrimmar
+        player:GossipMenuAddItem(2, "|TInterface\\Icons\\inv_misc_rune_06:30|t Teleport to Thunder Bluff", 1, 6)  -- Icon for Thunder Bluff
+        player:GossipMenuAddItem(2, "|TInterface\\Icons\\inv_misc_rune_09:30|t Teleport to Undercity", 1, 7)  -- Icon for Undercity
+        player:GossipMenuAddItem(2, "|TInterface\\Icons\\inv_misc_rune_11:30|t Teleport to Silvermoon City", 1, 8)  -- Icon for Silvermoon
+    end
+    
+    -- Add GM Island teleport for Game Masters only
+    if player:IsGM() then
+        player:GossipMenuAddItem(4, "|TInterface\\Icons\\achievement_guildperk_hastyhearth:30|t Teleport to GM Island", 1, 9)  -- Icon for GM Island
     end
     
     player:GossipSendMenu(1, creature, 1)
@@ -120,6 +125,8 @@ function OnGossipSelect(event, player, creature, sender, intid, code)
         player:Teleport(0, 1586.48, 239.562, -52.149, 0.05)
     elseif intid == 8 then  -- Silvermoon City
         player:Teleport(530, 9473.03, -7279.67, 14.29, 6.26)
+    elseif intid == 9 then  -- GM Island (GM only)
+        player:Teleport(1, 16222.1, 16252.1, 12.5, 1.6)  -- GM Island coordinates
     end
     
     player:GossipComplete()
@@ -128,6 +135,7 @@ end
 -- Register the gossip events
 RegisterCreatureGossipEvent(NPC_ID, 1, OnGossipHello)
 RegisterCreatureGossipEvent(NPC_ID, 2, OnGossipSelect)
+
 ```
 ### Step 3: Loading the Script into AzerothCore
 Save the Lua script to your Eluna scripts directory 

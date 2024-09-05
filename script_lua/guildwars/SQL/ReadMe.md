@@ -15,6 +15,7 @@ USE dreamforge;
 This command selects the dreamforge database so that all subsequent operations are performed within it.
 
 ### 2. Table Definitions
+
 a. guildwars_level_bracket
 This table defines the guild leveling system. Each row represents a guild level and contains the following fields:
 
@@ -28,6 +29,7 @@ This table defines the guild leveling system. Each row represents a guild level 
 
 `item_id`: An optional ID of an item rewarded to the guild upon reaching this level. If no item is rewarded, this field is set to NULL.
 
+
 b. guildwars_task
 
 This table contains templates for tasks that guild members can complete to earn XP. Each task has the following fields:
@@ -39,6 +41,7 @@ This table contains templates for tasks that guild members can complete to earn 
 `task_description`: A description of the task (e.g., 'Kill any creature to earn guild XP').
 
 `xp_amount`: The amount of XP awarded for completing the task.
+
 
 c. guildwars_level
 This table tracks each guild’s progress by storing the guild’s current level and XP:
@@ -59,6 +62,7 @@ The script inserts predefined guild levels (from level 1 to level 15), each with
 `Level 1 requires 1,000 XP and rewards 100 gold.`
 
 `Level 3 requires 5,000 XP and rewards 300 gold and an item with item_id 12345.`
+
 
 b. guildwars_task
 

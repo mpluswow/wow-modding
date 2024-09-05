@@ -48,7 +48,7 @@ INSERT INTO creature_template (
     speed_walk,               -- Walk speed
     speed_run,                -- Run speed
     scale,                    -- Size scale of the NPC
-    rank,                     -- Rank of the NPC (0 = Normal, 1 = Elite, etc.)
+    `rank`,                     -- Rank of the NPC (0 = Normal, 1 = Elite, etc.)
     AIName,                   -- AI script (leave blank if not using)
     ScriptName                -- Script name for Eluna script
 ) VALUES (

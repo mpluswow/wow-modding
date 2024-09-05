@@ -18,19 +18,22 @@ Before scripting the NPC, you must create the NPC and its model in your database
 First, define the model for the NPC in the `creature_model_info` table:
 
 ```sql
-INSERT INTO creature_model_info (
-    DisplayID,              -- Unique ID for the model
-    BoundingRadius,         -- Collision radius
-    CombatReach,            -- Combat reach
-    Gender,                 -- Gender of the model (0 = Male, 1 = Female, 2 = None)
-    DisplayID_Other_Gender  -- Display ID for the other gender, if applicable
+INSERT INTO `creature_template_model` (
+    `CreatureID`,
+    `Idx`,
+    `CreatureDisplayID`,
+    `DisplayScale`,
+    `Probability`,
+    `VerifiedBuild`
 ) VALUES (
-    11686,                  -- Display ID (e.g., human male model)
-    0.306000,               -- Bounding radius
-    1.5,                    -- Combat reach
-    2,                      -- Gender (2 = None for neutral)
-    0                       -- Display ID for other gender (0 = Not applicable)
+    60000,         -- CreatureID from `creature_template`
+    0,             -- Default model
+    12345,         -- Model ID for the portal (replace with actual ID)
+    1.0,           -- Scale
+    1.0,           -- Probability (always use this model)
+    NULL           -- Verified build (optional)
 );
+
 ```
 ### 1.2 Insert the NPC into the creature_template Table
 Next, create the NPC in the creature_template table:

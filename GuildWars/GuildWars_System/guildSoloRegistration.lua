@@ -1,5 +1,5 @@
 -- Define a global DEBUG_MODE variable
-local DEBUG_MODE = false  -- Set to false to disable debug messages
+local DEBUG_MODE = true  -- Set to false to disable debug messages
 
 -- Function to log debug messages only if DEBUG_MODE is true
 local function debugLog(message)
@@ -92,7 +92,7 @@ local function guildSoloTracker_RegisterOrUpdatePlayerIfNeeded(player)
     debugLog("[Player Update] Registering or updating player GUID: [" .. guid .. "]")
 
     -- Check if player exists in player_solo_ranking table
-    local query = string.format("SELECT * FROM acore_guildwars.player_solo_ranking WHERE guid = %d", guid)
+    local query = string.format("SELECT player_name, guild_id, guild_name FROM acore_guildwars.player_solo_ranking WHERE guid = %d", guid)
     local result = WorldDBQuery(query)
 
     if not result then
@@ -120,16 +120,27 @@ local function guildSoloTracker_RegisterOrUpdatePlayerIfNeeded(player)
             debugLog("[Error] Error fetching XP required for level 1 during registration.")
         end
     else
-        -- Update player details if they exist
-        local update_query = string.format(
-            "UPDATE acore_guildwars.player_solo_ranking SET player_name = '%s', guild_id = %d, guild_name = '%s' WHERE guid = %d",
-            player_name, guild_id, guild_name, guid
-        )
-        WorldDBExecute(update_query)
+        -- Fetch existing player data
+        local existing_player_name = result:GetString(0)
+        local existing_guild_id = result:GetInt32(1)
+        local existing_guild_name = result:GetString(2)
+
+        -- Update only if player_name or guild details have changed
+        if player_name ~= existing_player_name or guild_id ~= existing_guild_id or guild_name ~= existing_guild_name then
+            debugLog("[Player Update] Updating player details for GUID: [" .. guid .. "]")
+
+            local update_query = string.format(
+                "UPDATE acore_guildwars.player_solo_ranking SET player_name = '%s', guild_id = %d, guild_name = '%s' WHERE guid = %d",
+                player_name, guild_id, guild_name, guid
+            )
+            WorldDBExecute(update_query)
+            player:SendBroadcastMessage("Your details in the solo ranking table have been updated.")
+        else
+            debugLog("[Player Update] No changes detected for player GUID: [" .. guid .. "]")
+        end
 
         -- Check if the player needs a kill and level reset
         guildSoloTracker_ResetKillsAndLevelIfNeeded(player)
-        player:SendBroadcastMessage("Your details in the solo ranking table have been updated.")
     end
 end
 
@@ -158,4 +169,4 @@ local function OnPlayerLogin(event, player)
 end
 
 RegisterPlayerEvent(3, OnPlayerLogin)
-debugLog("[Registration] Registration Handler Loaded")
+debugLog("\n[Registration] Registration Handler Loaded")

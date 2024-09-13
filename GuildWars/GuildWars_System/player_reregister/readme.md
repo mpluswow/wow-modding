@@ -6,11 +6,11 @@ When a player logs in, the script first checks if the player exists in the
 
 Register the player in the player_level table with default values:
 
-- `player_level` set to 1.
-- `experience` set to 0.
+- `player_level` set to `1`.
+- `experience` set to `0`.
 - `next_level` fetched from the `player_level_brackets` table.
 - The current time is recorded as `last_reset`.
-- The `next_reset` is set to 30 days from the current time.
+- The `next_reset` is set to `30 days` from the current time.
 
 Registers the player in the `player_claimed_rewards` table, 
 where fields `lvl_1` to `lvl_15` are set to `0` (indicating that no rewards have been claimed).

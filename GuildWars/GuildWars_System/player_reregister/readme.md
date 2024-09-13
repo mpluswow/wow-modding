@@ -1,6 +1,7 @@
 Registering a new player in the player_level and player_claimed_rewards tables.
 
 Resetting player data after a 30-day period.
+
 Debugging support with messages that help trace the script's functionality.
 
 How It Works:

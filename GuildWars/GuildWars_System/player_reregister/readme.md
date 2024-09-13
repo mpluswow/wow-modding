@@ -25,7 +25,7 @@ If the current time is greater than or equal to `next_reset`, the player's data 
 - `experience` is reset to 0.
 - `next_level` is fetched from the 'player_level_brackets' table.
 
-The player's `last_reset` is updated to the current time, and `next_reset` is set to 30 days later,
+The player's `last_reset` is updated to the current time, and `next_reset` is set to `30 days` later,
 claimed rewards in the `player_claimed_rewards` table are also reset by setting `lvl_1` to `lvl_15` back to `0`.
 
 

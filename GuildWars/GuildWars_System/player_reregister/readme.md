@@ -4,7 +4,7 @@ Resetting player data after a 30-day period.
 
 Debugging support with messages that help trace the script's functionality.
 
-How It Works:
+
 
 ### 1. Checking and Registering a Player:
 When a player logs in, the script first checks if the player exists in the 

@@ -1,11 +1,3 @@
-Registering a new player in the player_level and player_claimed_rewards tables.
-
-Resetting player data after a 30-day period.
-
-Debugging support with messages that help trace the script's functionality.
-
-
-
 ### 1. Checking and Registering a Player:
 When a player logs in, the script first checks if the player exists in the 
 'player_level' table by querying the database using the player's 'guid'.

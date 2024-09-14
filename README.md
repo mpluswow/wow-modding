@@ -9,11 +9,6 @@ Discord: https://discord.gg/P4mpVGDpT2
 
 Website: https://www.wowmodding.net/
 
-### AzerothCore (master= 3.3.5a-12340)
-Website: https://www.azerothcore.org/
-
-### TrinityCore (master= Retail-11.0.2.56421)
-Website: https://trinitycore.org/
 
 ## Table of Contents
 

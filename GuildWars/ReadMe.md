@@ -8,6 +8,7 @@
 
 ## First Login
 Ignore this ERROR at first Player login.
+
 Player was not registered before so theres no next_reset date set at innitial check.
 After a relog it works as intended as player is now registered.
 

@@ -5,7 +5,7 @@ If your client-side function isn't expecting that, it could interpret the player
 as the first piece of data, leading to issues when processing the table of IDs.
 
 
-### WoW Modding Community
+## WoW Modding Community
 Discord: https://discord.gg/P4mpVGDpT2
 
 Website: https://www.wowmodding.net/

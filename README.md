@@ -1,8 +1,9 @@
-### IMPORTANT :
+### IMPORTANT
 AIO.Handle or AIO.Msg() functions automatically pass the player object as the first parameter. 
 
 If your client-side function isn't expecting that, it could interpret the player's name (or other attributes) 
 as the first piece of data, leading to issues when processing the table of IDs.
+
 
 ### WoW Modding Community
 Discord: https://discord.gg/P4mpVGDpT2

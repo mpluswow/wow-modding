@@ -6,7 +6,7 @@ local gw_fetchDATA_Handlers = AIO.AddHandlers("gw_fetchDATA", {})
 -- Function to fetch all necessary data in one query
 local function gw_fetchDATA_AllData(guid)
     -- Fetch all data in one query
-    local query = CharDBQuery("SELECT guild_name, player_kills, creature_kills, next_reset FROM acore_guildwars.player_solo_ranking WHERE guid = " .. guid)
+    local query = CharDBQuery("SELECT player_name, player_kills, creature_kills, next_reset FROM acore_guildwars.player_level WHERE guid = " .. guid)
     
     if query then
         -- Extract the results from the query

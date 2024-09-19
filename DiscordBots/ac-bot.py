@@ -3,31 +3,40 @@ import discord
 from discord.ext import commands
 import aiohttp
 import xml.etree.ElementTree as ET
+import logging  # Import logging for tracking command usage and errors
 
-# Set the SSL_CERT_FILE environment variable
+# ==============================
+# Configuration Variables
+# ==============================
+
+# Set the SSL_CERT_FILE environment variable (Update the path if needed)
 os.environ['SSL_CERT_FILE'] = r'C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\certifi\cacert.pem'
 
-# Replace with your actual bot token
-DISCORD_TOKEN = '-----'
+# Discord bot token (Replace with your actual bot token)
+DISCORD_TOKEN = '-----------------------------'
 
 # AzerothCore SOAP connection settings
-SOAP_URL = 'http://soapuser:password@localhost:7878/'  # Replace with your server's SOAP URL
+SOAP_URL = 'http://soapUSERNAME:soapUSERPASSWORD@localhost:7878/'  # Replace with your SOAP game account.
+
+# Name of the role that can use the commands
+ALLOWED_ROLE_NAME = "Remote"  # Replace with the role name that has access
+
+# Name of the text channel for the bot's default response
+DEFAULT_CHANNEL_NAME = "ac-remote"  # Replace with your channel name
+
+# ==============================
+# Logging Configuration
+# ==============================
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s', filename='bot_log.log')
+
+# ==============================
+# Bot and Command Implementation
+# ==============================
 
 # Define bot with application commands (slash commands)
 intents = discord.Intents.default()
 client = discord.Client(intents=intents)
 tree = discord.app_commands.CommandTree(client)
-
-# Dictionary to store help information for AzerothCore SOAP commands
-SOAP_HELP = {
-    "server": "Provides information about the server. Available subcommands:\n"
-              "- `server info`: Displays server information.\n"
-              "- `server status`: Shows the current status of the server.\n"
-              "- `server shutdown`: Initiates a server shutdown with optional delay.",
-    "server info": "Displays detailed information about the server's status, including uptime, connected players, etc.",
-    "server status": "Shows the current status of the server, such as the number of players online and server uptime.",
-    "server shutdown": "Shuts down the server. Usage:\n`server shutdown [delay in seconds]`."
-}
 
 async def send_soap_command(command):
     """
@@ -70,16 +79,20 @@ async def send_soap_command(command):
 
 @client.event
 async def on_ready():
-    print(f'Bot is ready and logged in as {client.user}')
+    logging.info(f'Bot is ready and logged in as {client.user}')
     await tree.sync()
-    print("Slash commands synced successfully.")
+    logging.info("Slash commands synced successfully.")
 
 @tree.command(name="ac", description="Execute a SOAP command on AzerothCore")
 async def execute(interaction: discord.Interaction, command: str):
     # Restrict access to users with a specific role
-    allowed_role_name = "Remote"  # Replace with the role name that has access
-    if not any(role.name == allowed_role_name for role in interaction.user.roles):
+    if not any(role.name == ALLOWED_ROLE_NAME for role in interaction.user.roles):
         await interaction.response.send_message("You do not have permission to use this command.", ephemeral=True)
+        return
+    
+    # Restrict to a specific channel
+    if interaction.channel.name != DEFAULT_CHANNEL_NAME:
+        await interaction.response.send_message(f"This command can only be used in the #{DEFAULT_CHANNEL_NAME} channel.", ephemeral=True)
         return
 
     await interaction.response.send_message("Processing command, please wait...", ephemeral=True)
@@ -95,21 +108,36 @@ async def execute(interaction: discord.Interaction, command: str):
                 embed = discord.Embed(title="Server Remote", description=response, color=discord.Color.blue())
                 await interaction.followup.send(embed=embed)
 
+            # Log the command usage
+            logging.info(f"User {interaction.user} executed command: {command}")
+
         except Exception as e:
             await interaction.followup.send(f"An error occurred: {str(e)}")
+            logging.error(f"Error executing command {command}: {str(e)}")
 
     client.loop.create_task(process_soap_command())
 
 @tree.command(name="ac-help", description="Get help for AzerothCore SOAP commands")
 async def soaphelp(interaction: discord.Interaction, command: str):
     # Restrict access to users with a specific role
-    allowed_role_name = "Remote"  # Replace with the role name that has access
-    if not any(role.name == allowed_role_name for role in interaction.user.roles):
+    if not any(role.name == ALLOWED_ROLE_NAME for role in interaction.user.roles):
         await interaction.response.send_message("You do not have permission to use this command.", ephemeral=True)
         return
 
-    help_text = SOAP_HELP.get(command.lower(), f"No help information available for '{command}'.")
-    embed = discord.Embed(title=f"Help: {command}", description=help_text, color=discord.Color.green())
+    # Restrict to a specific channel
+    if interaction.channel.name != DEFAULT_CHANNEL_NAME:
+        await interaction.response.send_message(f"This command can only be used in the #{DEFAULT_CHANNEL_NAME} channel.", ephemeral=True)
+        return
+
+    # Prepend "help" to the command to request help info from the server
+    help_command = f"help {command}"
+    response = await send_soap_command(help_command)
+
+    # Create an embed for the help information
+    embed = discord.Embed(title=f"Help: {command}", description=response, color=discord.Color.green())
     await interaction.response.send_message(embed=embed, ephemeral=True)  # Keep help responses ephemeral
+
+    # Log the help command usage
+    logging.info(f"User {interaction.user} requested help for command: {command}")
 
 client.run(DISCORD_TOKEN)

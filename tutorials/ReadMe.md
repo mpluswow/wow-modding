@@ -1,6 +1,7 @@
 ## What is Eluna?
 
 **Eluna** is a **Lua scripting engine** that extends the functionality of the World of Warcraft server emulator **AzerothCore**.
+
 It provides an easy-to-use, dynamic way to customize the game environment without needing to modify or recompile the server’s C++ core. 
 
 With Eluna, you can write scripts in Lua—a lightweight, fast, and embeddable scripting language used extensively in the gaming industry—to create custom game logic, 

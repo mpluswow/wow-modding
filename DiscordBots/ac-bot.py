@@ -8,10 +8,10 @@ import xml.etree.ElementTree as ET
 os.environ['SSL_CERT_FILE'] = r'C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\certifi\cacert.pem'
 
 # Replace with your actual bot token
-DISCORD_TOKEN = '...'
+DISCORD_TOKEN = '-----'
 
 # AzerothCore SOAP connection settings
-SOAP_URL = 'http://soapUSER:password123@localhost:7878/'  # Replace with your server's SOAP URL
+SOAP_URL = 'http://soapuser:password@localhost:7878/'  # Replace with your server's SOAP URL
 
 # Define bot with application commands (slash commands)
 intents = discord.Intents.default()

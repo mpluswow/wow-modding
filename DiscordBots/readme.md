@@ -1,3 +1,6 @@
+![image](https://github.com/user-attachments/assets/1e3a42a4-6964-429f-af43-5d369fd95440)
+
+
 ## Setting Up the AzerothCore SOAP Discord Bot
 
 ### Prerequisites:

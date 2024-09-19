@@ -1,7 +1,7 @@
 ## Setting Up the AzerothCore SOAP Discord Bot
 
 ### Prerequisites:
-`Python`: Ensure you have `Python 3.7` or newer installed on your system.
+Python: Ensure you have `Python 3.7` or newer installed on your system.
 Discord Bot: You need a `Discord bot token`, which you can obtain by creating a bot on the `Discord Developer Portal`.
 AzerothCore: An AzerothCore server with `SOAP enabled` and the correct username and password for SOAP authentication.
 Permissions: Ensure your Discord bot has the required permissions to interact with your Discord server.

@@ -3,10 +3,6 @@
 pip install discord.py
 pip install aiohttp
 ```
-
-## Installation
-To set up this bot, you'll need to install a few Python packages. Follow the steps below to install each package individually.
-
 ## Prerequisites
 Python 3.7 or higher is required to run this bot.
 Ensure you have pip (Python package installer) installed.

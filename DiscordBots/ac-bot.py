@@ -11,7 +11,7 @@ os.environ['SSL_CERT_FILE'] = r'C:\Users\Administrator\AppData\Local\Programs\Py
 DISCORD_TOKEN = '...'
 
 # AzerothCore SOAP connection settings
-SOAP_URL = 'http://soapuser:password123@localhost:7878/'  # Replace with your server's SOAP URL
+SOAP_URL = 'http://soapUSER:password123@localhost:7878/'  # Replace with your server's SOAP URL
 
 # Define bot with application commands (slash commands)
 intents = discord.Intents.default()
@@ -102,6 +102,12 @@ async def execute(interaction: discord.Interaction, command: str):
 
 @tree.command(name="ac-help", description="Get help for AzerothCore SOAP commands")
 async def soaphelp(interaction: discord.Interaction, command: str):
+    # Restrict access to users with a specific role
+    allowed_role_name = "Remote"  # Replace with the role name that has access
+    if not any(role.name == allowed_role_name for role in interaction.user.roles):
+        await interaction.response.send_message("You do not have permission to use this command.", ephemeral=True)
+        return
+
     help_text = SOAP_HELP.get(command.lower(), f"No help information available for '{command}'.")
     embed = discord.Embed(title=f"Help: {command}", description=help_text, color=discord.Color.green())
     await interaction.response.send_message(embed=embed, ephemeral=True)  # Keep help responses ephemeral

@@ -1,5 +1,6 @@
-![image](https://github.com/user-attachments/assets/d2751331-cb19-40f0-ab17-5d3d9c2d0067)
+![image](https://github.com/user-attachments/assets/1bd401ee-ef74-4ee9-b365-582666326e86)
 
+<img src="https://github.com/user-attachments/assets/1bd401ee-ef74-4ee9-b365-582666326e86" alt="image" width="300" height="200"/>
 
 
 ## Setting Up the AzerothCore SOAP Discord Bot

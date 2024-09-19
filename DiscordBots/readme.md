@@ -31,14 +31,19 @@ pip install certifi
 ## Step 2:
 
 Go to the Discord Developer Portal.
+
 Create a new application and add a bot to it.
+
 Save the bot token; you will need it later.
 
 Invite the Bot to Your Server:
 
 On the bot page, click on the "OAuth2" tab.
+
 Under "OAuth2 URL Generator", select bot and applications.commands.
+
 Under "Bot Permissions", select the necessary permissions (e.g., Send Messages, Embed Links).
+
 Copy the generated URL and open it in a browser to invite the bot to your server.
 
 ## Step 3: 

@@ -52,6 +52,7 @@ Copy the provided script into a Python file, e.g., discord_soap_bot.py.
 Configure the Bot Token and SOAP URL:
 
 Replace the placeholder in DISCORD_TOKEN with your bot token.
+
 Replace SOAP_URL with your AzerothCore server's SOAP URL, including the SOAP username and password.
 ```
 DISCORD_TOKEN = 'YOUR_DISCORD_BOT_TOKEN'
@@ -72,6 +73,7 @@ python discord_soap_bot.py
 Verify the Bot:
 
 In your Discord server, verify that the bot is online.
+
 Use the /ac and /ac-help commands to interact with the AzerothCore server.
 
 Example commands:
@@ -83,13 +85,15 @@ Example commands:
 /ac-help account create
 ```
 
-Common Issues and Troubleshooting
+## Common Issues and Troubleshooting
+
 SSL Certificate Errors:
 
 If you encounter SSL certificate errors, ensure you have the certifi package installed and set the SSL_CERT_FILE environment variable:
-python
-Copy code
+```
 os.environ['SSL_CERT_FILE'] = r'path\to\certifi\cacert.pem'
+```
+
 Permissions:
 
 Ensure your bot has the necessary permissions on your Discord server to send messages and embed links.

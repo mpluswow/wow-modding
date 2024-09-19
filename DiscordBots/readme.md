@@ -1,107 +1,103 @@
 <img src="https://github.com/user-attachments/assets/1bd401ee-ef74-4ee9-b365-582666326e86" alt="image" width="300" height="300"/>
 
+## Prerequisites
 
-## Setting Up the AzerothCore SOAP Discord Bot
+1. Ensure you have Python 3.7 or newer installed on your system.
 
-### Prerequisites:
+2. Obtain a Discord bot token by creating a bot on the [Discord Developer Portal](https://discord.com/developers/applications).
 
-Ensure you have `Python 3.7` or newer installed on your system.
+3. Have an AzerothCore server with SOAP enabled, and the correct username and password for SOAP authentication.
 
-You need a `Discord bot token`, which you can obtain by creating a bot on the `Discord Developer Portal`.
+4. Ensure your Discord bot has the required permissions to interact with your Discord server.
 
-An AzerothCore server with `SOAP enabled` and the correct username and password for SOAP authentication.
-
-Ensure your Discord bot has the required permissions to interact with your Discord server.
-
-
-## Step 1:
+## Step 1: Install Dependencies
 
 Run the following commands to install the necessary dependencies:
-```bash
-pip install discord aiohttp
-```
-The Discord API library for Python.
-An asynchronous HTTP client for making SOAP requests.
-
-
-
-To avoid SSL certificate issues, you need certifi:
 
 ```bash
-pip install certifi
+pip install discord aiohttp certifi
 ```
 
-## Step 2:
+- `discord`: The Discord API library for Python.
 
-Go to the Discord Developer Portal.
+- `aiohttp`: An asynchronous HTTP client for making SOAP requests.
 
-Create a new application and add a bot to it.
+- `certifi`: To avoid SSL certificate issues.
 
-Save the bot token; you will need it later.
+## Step 2: Set Up the Discord Bot
 
-Invite the Bot to Your Server:
+1. Go to the [Discord Developer Portal](https://discord.com/developers/applications).
 
-On the bot page, click on the "OAuth2" tab.
+2. Create a new application and add a bot to it.
 
-Under "OAuth2 URL Generator", select bot and applications.commands.
+3. Save the bot token; you will need it later.
 
-Under "Bot Permissions", select the necessary permissions (e.g., Send Messages, Embed Links).
+4. Invite the Bot to Your Server:
 
-Copy the generated URL and open it in a browser to invite the bot to your server.
+   - On the bot page, click on the "OAuth2" tab.
+   - Under "OAuth2 URL Generator," select `bot` and `applications.commands`.
+   - Under "Bot Permissions," select the necessary permissions (e.g., Send Messages, Embed Links).
+   - Copy the generated URL and open it in a browser to invite the bot to your server.
 
-## Step 3: 
-Copy the provided script into a Python file, e.g., discord_soap_bot.py.
+## Step 3: Configure and Run the Bot Script
 
-Configure the Bot Token and SOAP URL:
+1. Copy the provided script into a Python file, e.g., `discord_soap_bot.py`.
 
-Replace the placeholder in DISCORD_TOKEN with your bot token.
+2. Configure the Bot Token and SOAP URL:
 
-Replace SOAP_URL with your AzerothCore server's SOAP URL, including the SOAP username and password.
-```
-DISCORD_TOKEN = 'YOUR_DISCORD_BOT_TOKEN'
-SOAP_URL = 'http://soapuser:password@localhost:7878/'  # Replace with your server's SOAP URL
-```
-Optional: 
-SSL Certificates: If you encounter SSL certificate issues, you can specify the location of cacert.pem using the SSL_CERT_FILE environment variable:
+   - Replace the placeholder in `DISCORD_TOKEN` with your bot token.
+   - Replace `SOAP_URL` with your AzerothCore server's SOAP URL, including the SOAP username and password.
 
-```
-os.environ['SSL_CERT_FILE'] = r'path\to\certifi\cacert.pem'
-```
+   ```python
+   DISCORD_TOKEN = 'YOUR_DISCORD_BOT_TOKEN'
+   SOAP_URL = 'http://soapuser:password@localhost:7878/'  # Replace with your server's SOAP URL
+   ```
 
-Step 4: 
-Run the Python Script
-```
+3. **Optional: SSL Certificates**: If you encounter SSL certificate issues, specify the location of `cacert.pem` using the `SSL_CERT_FILE` environment variable:
+
+   ```python
+   os.environ['SSL_CERT_FILE'] = r'path\to\certifi\cacert.pem'
+   ```
+
+## Step 4: Run the Python Script
+
+Run the script using Python:
+
+```bash
 python discord_soap_bot.py
 ```
-Verify the Bot:
 
-In your Discord server, verify that the bot is online.
+## Step 5: Verify the Bot
 
-Use the /ac and /ac-help commands to interact with the AzerothCore server.
+1. In your Discord server, verify that the bot is online.
+2. Use the `/ac` and `/ac-help` commands to interact with the AzerothCore server.
 
-Example commands:
+### Example Commands
 
-```bash
-/ac commands
-/ac server info
-/ac-help server
-/ac-help account create
-```
+- `/ac commands`
+- `/ac server info`
+- `/ac-help server`
+- `/ac-help account create`
 
 ## Common Issues and Troubleshooting
 
-SSL Certificate Errors:
+### SSL Certificate Errors
 
-If you encounter SSL certificate errors, ensure you have the certifi package installed and set the SSL_CERT_FILE environment variable:
-```
-os.environ['SSL_CERT_FILE'] = r'path\to\certifi\cacert.pem'
-```
+If you encounter SSL certificate errors:
 
-Permissions:
+- Ensure you have the `certifi` package installed.
+- Set the `SSL_CERT_FILE` environment variable:
+
+  ```python
+  os.environ['SSL_CERT_FILE'] = r'path\to\certifi\cacert.pem'
+  ```
+
+### Permissions
 
 Ensure your bot has the necessary permissions on your Discord server to send messages and embed links.
-Bot Not Responding:
 
-Ensure the bot is online and running.
-Verify that the bot token and SOAP URL are correctly configured.
+### Bot Not Responding
 
+- Ensure the bot is online and running.
+- Verify that the bot token and SOAP URL are correctly configured.
+- Ensure that the bot commands are used in the correct channel if channel restrictions are applied.

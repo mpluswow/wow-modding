@@ -2,13 +2,13 @@
 
 ### Prerequisites:
 
-Python: Ensure you have `Python 3.7` or newer installed on your system.
+Ensure you have `Python 3.7` or newer installed on your system.
 
-Discord Bot: You need a `Discord bot token`, which you can obtain by creating a bot on the `Discord Developer Portal`.
+You need a `Discord bot token`, which you can obtain by creating a bot on the `Discord Developer Portal`.
 
-AzerothCore: An AzerothCore server with `SOAP enabled` and the correct username and password for SOAP authentication.
+An AzerothCore server with `SOAP enabled` and the correct username and password for SOAP authentication.
 
-Permissions: Ensure your Discord bot has the required permissions to interact with your Discord server.
+Ensure your Discord bot has the required permissions to interact with your Discord server.
 
 
 ## Step 1:
@@ -17,10 +17,11 @@ Run the following commands to install the necessary dependencies:
 ```bash
 pip install discord aiohttp
 ```
-discord: The Discord API library for Python.
-aiohttp: An asynchronous HTTP client for making SOAP requests.
+The Discord API library for Python.
+An asynchronous HTTP client for making SOAP requests.
 
-Install certifi:
+
+
 To avoid SSL certificate issues, you need certifi:
 
 ```bash

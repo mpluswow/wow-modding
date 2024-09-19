@@ -11,7 +11,7 @@ His tone is both authoritative and compassionate, showing his love for his son a
 
 - Role: A young boy and the son of General Tharador and Elara, Edrin represents innocence and the new hope for the world. He is the story’s bridge between the past and the future, destined for greatness within the realm of the Dreamforge.
 
--Personality: Curious, eager to learn, and brave despite his young age. Edrin initially seems fearful of the world’s dark realities but quickly grows into his potential, especially when he transforms into a Dreamweaver. His journey signifies the emergence of a new guardian born to protect the Dreamforge.
+- Personality: Curious, eager to learn, and brave despite his young age. Edrin initially seems fearful of the world’s dark realities but quickly grows into his potential, especially when he transforms into a Dreamweaver. His journey signifies the emergence of a new guardian born to protect the Dreamforge.
 
 
 

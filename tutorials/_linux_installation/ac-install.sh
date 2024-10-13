@@ -1,20 +1,15 @@
 #!/bin/bash
 
-# Function to print messages in different colors
-print_in_color() {
-  case $2 in
-    "yellow") echo -e "\033[1;33m$1\033[0m" ;; # Yellow
-    "green") echo -e "\033[1;32m$1\033[0m" ;;  # Green
-    "red") echo -e "\033[1;31m$1\033[0m" ;;    # Red
-    *) echo "$1" ;;                            # Default color
-  esac
+# Function to print messages (no colors)
+print_message() {
+  echo "$1"
 }
 
 # Print initial message
-print_in_color "AzerothCore & Modules Linux installation script." "yellow"
+print_message "AzerothCore & Modules Linux installation script."
 
 # Ask user if they want to begin installation
-read -p "$(print_in_color "Do you want to begin installation? (Yes/No): " "yellow")" user_input
+read -p "Do you want to begin installation? (Yes/No): " user_input
 
 # Exit if user says no
 if [[ $user_input != "Yes" && $user_input != "yes" ]]; then
@@ -23,15 +18,15 @@ if [[ $user_input != "Yes" && $user_input != "yes" ]]; then
 fi
 
 # Ask user if they want to install dependencies
-read -p "$(print_in_color "Do you want to install all dependencies? (Yes/No): " "yellow")" install_deps
+read -p "Do you want to install all dependencies? (Yes/No): " install_deps
 
 if [[ $install_deps == "Yes" || $install_deps == "yes" ]]; then
   # Update package list and install dependencies
   sudo apt-get update
   if sudo apt-get install -y git cmake make gcc g++ clang libmysqlclient-dev libssl-dev libbz2-dev libreadline-dev libncurses-dev mysql-server libboost-all-dev; then
-    print_in_color "Dependencies installed successfully." "green"
+    print_message "Dependencies installed successfully."
   else
-    print_in_color "Failed to install dependencies." "red"
+    print_message "Failed to install dependencies."
     exit 1
   fi
 else
@@ -42,12 +37,12 @@ fi
 sleep 2
 
 # Clone AzerothCore and modules
-print_in_color "Cloning AzerothCore and Modules" "yellow"
+print_message "Cloning AzerothCore and Modules"
 if git clone https://github.com/azerothcore/azerothcore-wotlk.git --branch master --single-branch ~/azerothcore-source && \
    git clone https://github.com/azerothcore/mod-eluna.git ~/azerothcore-source/modules/mod-eluna; then
-  print_in_color "AzerothCore and modules cloned successfully." "green"
+  print_message "AzerothCore and modules cloned successfully."
 else
-  print_in_color "Failed to clone AzerothCore or modules." "red"
+  print_message "Failed to clone AzerothCore or modules."
   exit 1
 fi
 
@@ -55,7 +50,7 @@ fi
 sleep 2
 
 # Print message for compilation and installation
-print_in_color "Compilation and installation." "yellow"
+print_message "Compilation and installation."
 
 # Create build directory
 mkdir -p ~/azerothcore-server
@@ -63,25 +58,26 @@ cd ~/azerothcore-server
 
 # Run CMake with the specified options
 if cmake ../ -DCMAKE_INSTALL_PREFIX=$HOME/azerothcore-source/env/dist/ -DCMAKE_C_COMPILER=/usr/bin/clang -DCMAKE_CXX_COMPILER=/usr/bin/clang++ -DWITH_WARNINGS=1 -DTOOLS_BUILD=all -DSCRIPTS=static -DMODULES=static; then
-  print_in_color "CMake configuration successful." "green"
+  print_message "CMake configuration successful."
 else
-  print_in_color "CMake configuration failed." "red"
+  print_message "CMake configuration failed."
   exit 1
 fi
 
 # Check number of CPU cores and start build
 cpu_cores=$(nproc --all)
 if make -j "$cpu_cores"; then
-  print_in_color "Build completed successfully." "green"
+  print_message "Build completed successfully."
 else
-  print_in_color "Build failed." "red"
+  print_message "Build failed."
   exit 1
 fi
 
 # Install the compiled binaries
 if make install; then
-  print_in_color "AzerothCore installed successfully." "green"
+  print_message "AzerothCore installed successfully."
 else
-  print_in_color "AzerothCore installation failed." "red"
+  print_message "AzerothCore installation failed."
   exit 1
 fi
+

@@ -1,10 +1,10 @@
-# 🪙 Treasure Goblin Integration for AzerothCore
+# Treasure Goblin Integration for AzerothCore
 
 This project adds a **Treasure Goblin** encounter to your AzerothCore server. Please follow the instructions below to install it correctly.
 
 ---
 
-## 📁 Server-Side Installation
+##  Server-Side Installation
 
 1. Copy the entire `Treasure Goblin` folder into your server's `lua_scripts` directory:
 
@@ -22,7 +22,7 @@ $USER/server/azerothcore/env/dist//bin/data/DBC/
 
 ---
 
-## 💻 Client-Side Setup
+## Client-Side Setup
 
 1. Copy the `patch-Z.MPQ` file into your client’s `Data` folder:
 ```
@@ -33,7 +33,7 @@ World of Warcraft/Data/
 
 ---
 
-## 🛠 SQL Configuration
+## SQL Configuration
 
 > **Note:** These SQL files are specifically tailored for **AzerothCore**.
 
@@ -42,7 +42,7 @@ World of Warcraft/Data/
 
 ---
 
-## ⚠️ Compatibility
+## Compatibility
 
 This script is designed and tested for:
 - AzerothCore 3.3.5a (Wrath of the Lich King)

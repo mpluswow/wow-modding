@@ -1,5 +1,3 @@
----
-
 # 🛠 AzerothCore Manual Installation Guide (Ubuntu/Debian)
 
 This guide explains each command manually, so you can follow along without running a script. It covers:
@@ -10,7 +8,6 @@ This guide explains each command manually, so you can follow along without runni
 * Setting up MySQL
 * Creating systemd services
 
----
 
 ## ✅ Step 1: Update System Packages
 

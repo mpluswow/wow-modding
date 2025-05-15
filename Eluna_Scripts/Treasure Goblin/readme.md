@@ -1,5 +1,3 @@
-
-```markdown
 # 🪙 Treasure Goblin Integration for AzerothCore
 
 This project adds a **Treasure Goblin** encounter to your AzerothCore server. Please follow the instructions below to install it correctly.
@@ -9,8 +7,8 @@ This project adds a **Treasure Goblin** encounter to your AzerothCore server. Pl
 ## 📁 Server-Side Installation
 
 1. Copy the entire `Treasure Goblin` folder into your server's `lua_scripts` directory:
-```
 
+```
 yourserver/src/server/scripts/lua\_scripts/
 
 ```

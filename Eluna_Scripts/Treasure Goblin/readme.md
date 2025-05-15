@@ -9,14 +9,14 @@ This project adds a **Treasure Goblin** encounter to your AzerothCore server. Pl
 1. Copy the entire `Treasure Goblin` folder into your server's `lua_scripts` directory:
 
 ```
-yourserver/src/server/scripts/lua_scripts/
+$USER/server/azerothcore/env/dist/bin/lua_scripts/
 
 ```
 
 2. Copy the provided **DBC files** into your AzerothCore Game Data DBC folder:
 ```
 
-$USER/server/azerothcore/env/dist//bin/data/DBC/
+$USER/server/azerothcore/env/dist/bin/data/DBC/
 
 ```
 

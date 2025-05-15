@@ -2,7 +2,7 @@
 
 # 🛠 AzerothCore Manual Installation Guide (Ubuntu/Debian)
 
-This guide explains **each command manually**, so you can follow along without running a script. It covers:
+This guide explains each command manually, so you can follow along without running a script. It covers:
 
 * Dependencies
 * Cloning AzerothCore and selected modules

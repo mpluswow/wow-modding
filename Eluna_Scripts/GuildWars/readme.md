@@ -7,19 +7,6 @@ Future updates will include custom PvE content such as boss and elite creature e
 
 ---
 
-## Features
-
-- Zone capturing through in-game GameObject interaction
-- Captures restricted to players with a guild
-- Cooldown period after zone capture to prevent immediate recapture
-- Ownership data stored in the `guildwars_captured_zone` table
-- Full capture logging in the `guildwars_capture_history` table
-- Reputation gain (+10) with custom faction ID `1165` for successful captures
-- XP bonuses for guild members in zones their guild controls (per-zone configurable)
-- Gold rewards when killing creatures in controlled zones (scales with creature level, per-zone configurable)
-- Future PvE expansions: custom bosses and elite spawns in contested zones
-
----
 
 ## Installation
 

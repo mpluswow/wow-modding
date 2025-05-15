@@ -1,0 +1,1 @@
+Faction ID 1163 - Treasure Goblin

@@ -1,8 +1,5 @@
--- Create the 'dreamforge' database
-CREATE DATABASE IF NOT EXISTS dreamforge;
-
--- Use the 'dreamforge' database
-USE dreamforge;
+-- Use the 'acore_characters' database
+USE acore_characters;
 
 -- Create the 'recruitfriend' table
 CREATE TABLE IF NOT EXISTS recruitfriend (

@@ -1,5 +1,5 @@
 -- Database information
-local DATABASE_NAME = "dreamforge"
+local DATABASE_NAME = "acore_characters"
 local TABLE_NAME = "recruitfriend"
 
 -- Recruit a friend command (store relationship in the database)

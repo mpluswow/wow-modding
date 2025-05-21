@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AzerothCore Installer Script – WoW Modding Hub</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #121212;
+      color: #e0e0e0;
+    }
+
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #1a2642;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.4);
+      z-index: 1000;
+    }
+
+    .navbar h1 {
+      margin: 0;
+      color: #e0e0e0;
+      font-size: 1.6rem;
+    }
+
+    .navbar a {
+      background-color: #2a3b5f;
+      color: #f0e6d2;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      border: 1px solid #3b8cff;
+      box-shadow: 0 0 6px rgba(59, 140, 255, 0.4);
+      transition: background-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .navbar a:hover {
+      background-color: #3b8cff;
+      color: #fff;
+      box-shadow: 0 0 10px rgba(59, 140, 255, 0.8);
+    }
+
+    .content {
+      padding: 7rem 2rem 3rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      color: #00bfff;
+      margin-bottom: 1rem;
+    }
+
+    h2, h3 {
+      color: #3b8cff;
+      margin-top: 2rem;
+    }
+
+    h3 {
+      font-size: 1.2rem;
+      color: #00bfff;
+    }
+
+    p {
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+
+    ul {
+      list-style-type: disc;
+      padding-left: 2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    code {
+      background-color: #1f1f1f;
+      color: #8fdfff;
+      padding: 0.2rem 0.4rem;
+      border-radius: 4px;
+      font-size: 0.95rem;
+    }
+
+    pre {
+      background-color: #1e1e1e;
+      border-left: 4px solid #3b8cff;
+      padding: 1rem;
+      overflow-x: auto;
+      border-radius: 6px;
+      margin: 1rem 0;
+    }
+
+    hr {
+      border: 0;
+      border-top: 1px solid #333;
+      margin: 2rem 0;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="navbar">
+    <h1>Installer Script</h1>
+    <a href="index.html">Return Home</a>
+  </div>
+
+  <div class="content">
+
+    <h1>AzerothCore Auto Installer Script</h1>
+
+    <p>This Bash script automates the full setup process for an <code>AzerothCore</code> server on Ubuntu systems. <br>
+	   It's designed to save time and reduce user error by handling everything from package installs to systemd service setup.</p>
+
+    <h3>Features</h3>
+    <p>When you run this script, it will:</p>
+    <ul>
+      <li>Update your system packages</li>
+      <li>Install all dependencies required to build AzerothCore</li>
+      <li>Clone the latest AzerothCore source</li>
+      <li>Prompt you to select and install custom modules</li>
+      <li>Build the core and install binaries</li>
+      <li>Download and extract client data</li>
+      <li>Create a MySQL user <code>acore</code> and assign privileges</li>
+      <li>Install systemd services for easy server management</li>
+    </ul>
+
+    <h3>Install Paths After Completion</h3>
+    <ul>
+      <li><strong>Binaries:</strong> <code>~/server/azerothcore/env/dist/bin/</code></li>
+      <li><strong>Configs:</strong> <code>~/server/azerothcore/env/dist/etc/</code></li>
+      <li><strong>Game Data:</strong> <code>~/server/azerothcore/env/dist/bin/data/</code></li>
+    </ul>
+
+    <h3>Usage</h3>
+    <pre><code>sudo chmod +x ac-install.sh</code></pre>
+    <pre><code>sudo ./ac-install.sh</code></pre>
+
+    <h3>Module Selection</h3>
+    <p>The script supports interactive module selection using <code>dialog</code>. If dialog isn't installed, it falls back to manual input. Available modules include:</p>
+    <ul>
+      <li>mod-world-chat</li>
+      <li>mod-eluna</li>
+      <li>mod-ah-bot</li>
+      <li>mod-pocket-portal</li>
+      <li>mod-npc-buffer</li>
+      <li>...and many more</li>
+    </ul>
+
+    <h3>Post Installation</h3>
+    <p>Once finished, you can manage your servers using:</p>
+    <pre><code>sudo systemctl start authserver</code></pre>
+    <pre><code>sudo systemctl start worldserver</code></pre>
+    <p>To enable them at boot:</p>
+    <pre><code>sudo systemctl enable authserver
+sudo systemctl enable worldserver</code></pre>
+
+    <hr>
+    <p>This script is ideal for both beginners and experienced server admins looking to get AzerothCore running fast with minimal hassle.</p>
+
+  </div>
+
+</body>
+</html>

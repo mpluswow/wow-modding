@@ -30,14 +30,13 @@
       margin: 0;
       color: #e0e0e0;
       font-size: 1.6rem;
-      text-shadow: 0 0 6px #000;
     }
 
     .navbar a {
       background-color: #2a3b5f;
       color: #f0e6d2;
       text-decoration: none;
-      padding: 0.4rem 0.8rem;
+      padding: 0.5rem 1rem;
       border-radius: 6px;
       font-size: 0.9rem;
       border: 1px solid #3b8cff;
@@ -53,47 +52,59 @@
 
     .content {
       padding: 7rem 2rem 2rem;
-      max-width: 1000px;
+      max-width: 900px;
       margin: 0 auto;
     }
 
     h2 {
-      font-size: 1.4rem;
+      color: #3b8cff;
+      font-size: 1.5rem;
       border-bottom: 1px solid #3b8cff;
       padding-bottom: 0.5rem;
+      margin-top: 2rem;
       margin-bottom: 1rem;
     }
 
     ul {
       list-style: none;
-      padding-left: 0;
+      padding: 0;
     }
 
     li {
-      background-color: rgba(0, 0, 0, 0.4);
-      border: 1px solid #2c2c3c;
-      border-left: 4px solid #3b8cff;
-      padding: 1rem;
-      margin-bottom: 1rem;
-      border-radius: 8px;
+      margin-bottom: 0.5rem;
     }
 
-    li a {
-      color: #00bfff;
+    .section-title {
+      font-size: 1.3rem;
       font-weight: bold;
-      text-decoration: none;
-      font-size: 1.1rem;
+      color: #00bfff;
+      margin: 2rem 0 1rem;
     }
 
-    li a:hover {
+    .link-block {
+      background-color: #1e1e1e;
+      border-left: 4px solid #3b8cff;
+      padding: 0.8rem 1rem;
+      border-radius: 6px;
+      margin-bottom: 0.7rem;
+    }
+
+    .link-block a {
+      color: #00bfff;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.05rem;
+    }
+
+    .link-block a:hover {
       text-decoration: underline;
     }
 
-    li em {
+    .link-block em {
       display: block;
+      font-size: 0.9rem;
       color: #ccc;
-      margin-top: 0.3rem;
-      font-size: 0.95rem;
+      margin-top: 0.2rem;
     }
   </style>
 </head>
@@ -105,41 +116,57 @@
   </div>
 
   <div class="content">
-    <h2 id="table-of-contents">Table of Contents</h2>
-    <ul>
-      <li>
-        <a href="docs/Linux-Installation/ReadMe.md">Installation: Linux</a>
-        <em>Step-by-step installation on Linux using Bash</em>
-      </li>
-      <li>
-        <a href="docs/Windows-Installation/ReadMe.md">Installation: Windows</a>
-        <em>Installation and setup on Windows with WAMP/XAMPP</em>
-      </li>
-      <li>
-        <a href="docs/Commands/ReadMe.md">Commands</a>
-        <em>Useful in-game and server commands for modding</em>
-      </li>
-      <li>
-        <a href="docs/Creatures/ReadMe.md">Creatures</a>
-        <em>How to create, edit, and script creatures</em>
-      </li>
-      <li>
-        <a href="docs/Items/ReadMe.md">Items</a>
-        <em>Custom items, flags, bonuses, and DBC linkups</em>
-      </li>
-      <li>
-        <a href="docs/GameObjects/ReadMe.md">GameObjects</a>
-        <em>Adding custom portals, chests, and visual GOs</em>
-      </li>
-      <li>
-        <a href="docs/DBC-Editing/ReadMe.md">DBC Editing</a>
-        <em>Client-side database modification and structure</em>
-      </li>
-      <li>
-        <a href="docs/Eluna/ReadMe.md">Eluna</a>
-        <em>Lua scripting basics, hooks, and examples</em>
-      </li>
-    </ul>
+
+    <div class="section-title">AzerothCore Installation</div>
+    <div class="link-block">
+      <a href="Linux-Installation/linux-install.html">Linux Guide</a>
+      <em><a href="">Step-by-step manual installation</a> / <a href="">Auto-install using Bash scripts</a></em>
+    </div>
+    <div class="link-block">
+      <a href="docs/Windows-Installation/ReadMe.md">Windows Guide</a>
+      <em>Installation with WAMP/XAMPP</em>
+    </div>
+
+    <div class="section-title">Create Server Content</div>
+    <div class="link-block">
+      <a href="docs/Introduction/ReadMe.md">Introduction</a>
+      <em>Overview of creating content in AzerothCore</em>
+    </div>
+    <div class="link-block">
+      <a href="docs/Tools/ReadMe.md">Tools</a>
+      <em>Utilities and editors for modding</em>
+    </div>
+    <div class="link-block">
+      <a href="docs/Commands/ReadMe.md">Commands</a>
+      <em>Useful in-game and server-side commands</em>
+    </div>
+    <div class="link-block">
+      <a href="docs/Creatures/ReadMe.md">Creatures</a>
+      <em>How to create, edit, and script NPCs</em>
+    </div>
+    <div class="link-block">
+      <a href="docs/Items/ReadMe.md">Items</a>
+      <em>Designing custom items, flags, stats, and bonuses</em>
+    </div>
+    <div class="link-block">
+      <a href="docs/GameObjects/ReadMe.md">GameObjects</a>
+      <em>Creating portals, chests, and static visuals</em>
+    </div>
+    <div class="link-block">
+      <a href="docs/Reputation/ReadMe.md">Reputation</a>
+      <em>Adding and modifying faction reputation</em>
+    </div>
+
+    <div class="section-title">Advanced Topics</div>
+    <div class="link-block">
+      <a href="docs/DBC-Editing/ReadMe.md">DBC Editing</a>
+      <em>Client-side database structures and editing</em>
+    </div>
+    <div class="link-block">
+      <a href="docs/Eluna/ReadMe.md">Eluna</a>
+      <em>Lua scripting, hooks, and examples</em>
+    </div>
+
   </div>
 
 </body>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tutorials – WoW Modding Hub</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #121212;
+      color: #e0e0e0;
+    }
+
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #1a2642;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.4);
+      z-index: 1000;
+    }
+
+    .navbar h1 {
+      margin: 0;
+      color: #e0e0e0;
+      font-size: 1.6rem;
+      text-shadow: 0 0 6px #000;
+    }
+
+    .navbar a {
+      background-color: #2a3b5f;
+      color: #f0e6d2;
+      text-decoration: none;
+      padding: 0.4rem 0.8rem;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      border: 1px solid #3b8cff;
+      box-shadow: 0 0 6px rgba(59, 140, 255, 0.4);
+      transition: background-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .navbar a:hover {
+      background-color: #3b8cff;
+      color: #fff;
+      box-shadow: 0 0 10px rgba(59, 140, 255, 0.8);
+    }
+
+    .content {
+      padding: 7rem 2rem 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+      border-bottom: 1px solid #3b8cff;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    li {
+      background-color: rgba(0, 0, 0, 0.4);
+      border: 1px solid #2c2c3c;
+      border-left: 4px solid #3b8cff;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border-radius: 8px;
+    }
+
+    li a {
+      color: #00bfff;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 1.1rem;
+    }
+
+    li a:hover {
+      text-decoration: underline;
+    }
+
+    li em {
+      display: block;
+      color: #ccc;
+      margin-top: 0.3rem;
+      font-size: 0.95rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="navbar">
+    <h1>Tutorials</h1>
+    <a href="index.html">Return Home</a>
+  </div>
+
+  <div class="content">
+    <h2 id="table-of-contents">Table of Contents</h2>
+    <ul>
+      <li>
+        <a href="docs/Linux-Installation/ReadMe.md">Installation: Linux</a>
+        <em>Step-by-step installation on Linux using Bash</em>
+      </li>
+      <li>
+        <a href="docs/Windows-Installation/ReadMe.md">Installation: Windows</a>
+        <em>Installation and setup on Windows with WAMP/XAMPP</em>
+      </li>
+      <li>
+        <a href="docs/Commands/ReadMe.md">Commands</a>
+        <em>Useful in-game and server commands for modding</em>
+      </li>
+      <li>
+        <a href="docs/Creatures/ReadMe.md">Creatures</a>
+        <em>How to create, edit, and script creatures</em>
+      </li>
+      <li>
+        <a href="docs/Items/ReadMe.md">Items</a>
+        <em>Custom items, flags, bonuses, and DBC linkups</em>
+      </li>
+      <li>
+        <a href="docs/GameObjects/ReadMe.md">GameObjects</a>
+        <em>Adding custom portals, chests, and visual GOs</em>
+      </li>
+      <li>
+        <a href="docs/DBC-Editing/ReadMe.md">DBC Editing</a>
+        <em>Client-side database modification and structure</em>
+      </li>
+      <li>
+        <a href="docs/Eluna/ReadMe.md">Eluna</a>
+        <em>Lua scripting basics, hooks, and examples</em>
+      </li>
+    </ul>
+  </div>
+
+</body>
+</html>

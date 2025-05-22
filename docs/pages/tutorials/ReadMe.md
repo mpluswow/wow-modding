@@ -14,27 +14,26 @@ We welcome contributions, bug fixes, and additional tutorials! Here's how you ca
 
 Please make sure to follow best practices and keep formatting consistent.
 
----
 
 ## AzerothCore Installation
-
+---
 - [Linux Guide](Linux-Installation/linux-install.html)  
   _Step-by-step manual installation or installation using Bash script_
 
 - [Windows Guide](docs/Windows-Installation/ReadMe.md)  
   _Step-by-step manual installation for Windows_
 
----
+
 
 ## Tools
-
+---
 - [Tools](docs/Tools/ReadMe.md)  
   _Utilities and editors for modding_
 
 ---
 
 ## Introduction
-
+---
 - [Introduction](docs/Introduction/ReadMe.md)  
   _Overview of creating content in AzerothCore_
 
@@ -47,7 +46,7 @@ Please make sure to follow best practices and keep formatting consistent.
 ---
 
 ## Create Server Content
-
+---
 - [Commands](docs/Commands/ReadMe.md)  
   _Useful in-game and server-side commands_
 

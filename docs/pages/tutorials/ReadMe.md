@@ -1,9 +1,4 @@
 
-Tutorials
-=========
-
-[Return Home](index.html)
-
 ## AzerothCore Installation
 
 [Linux Guide](Linux-Installation/linux-install.html) _Step-by-step manual installation / Auto-install using Bash scripts_
@@ -31,3 +26,6 @@ Advanced Topics
 [DBC Editing](docs/DBC-Editing/ReadMe.md) _Client-side database structures and editing_
 
 [Eluna](docs/Eluna/ReadMe.md) _Lua scripting, hooks, and examples_
+
+
+[Return Home](index.html)

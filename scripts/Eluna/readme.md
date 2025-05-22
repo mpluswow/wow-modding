@@ -9,25 +9,19 @@ These scripts are built to help customize gameplay, streamline server features, 
 ## Script Index
 
 ### [**AccountCreationBoost**](AccountCreationBoost)
-Automatically boosts new accounts upon creation—could include level, gold, gear, or teleport rewards.
 
 ### [**DiscordAuctionBOT**](DiscordAuctionBOT)
-Integrates in-game auction data or items with a Discord bot. Likely designed to sync item posts or player bids through Discord.
 
 ### [**GuildWars**](GuildWars)
-Introduces a zone control system for guilds, allowing PvP-driven territory capture, reputation rewards, and competition mechanics.
 
 ### [**RecruitFriend**](RecruitFriend)
-Implements a Recruit-a-Friend system, possibly including XP boosts, summon commands, or time-based rewards for playing together.
 
 ### [**RestZoneSpeed**](RestZoneSpeed)
-Enhances XP gains in rest zones or inns, possibly speeding up level progression or modifying rested XP mechanics.
 
 ### [**TeleporterNPC**](TeleporterNPC)
-Adds a customizable teleportation NPC to allow fast travel between key locations, ideal for funservers or leveling realms.
 
 ### [**Treasure Goblin**](Treasure%20Goblin)
-Spawns a treasure goblin NPC that drops loot or gold upon defeat—great for events or rare map encounters.
+
 
 
 ## Requirements

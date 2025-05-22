@@ -1,3 +1,14 @@
+## Table of Contents
+
+- [Tutourioals](tutorials/readme.md)  
+  *Bash script to install AzerothCore with Modules*
+
+- [Eluna Scripts](tutorials/ReadMe.md)  
+  *Learn how you can contribute to the project and collaborate with others.*
+  
+- [SQL Scripts](tutorials/ReadMe.md)  
+  *Learn how you can contribute to the project and collaborate with others.*
+  
 ### IMPORTANT :
 AIO.Handle or AIO.Msg() functions automatically pass the player object as the first parameter. 
 If your client-side function isn't expecting that, it could interpret the player's name (or other attributes) 
@@ -12,12 +23,6 @@ Website: https://www.wowmodding.net/
 Website: https://www.azerothcore.org/
 
 
-## Table of Contents
 
-- [Installation: Linux](tutorials/_linux_installation/ReadMe.md)  
-  *Bash script to install AzerothCore with Modules*
-
-- [Contributing](tutorials/contributing/ReadMe.md)  
-  *Learn how you can contribute to the project and collaborate with others.*
 
 

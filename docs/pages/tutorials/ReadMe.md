@@ -1,10 +1,10 @@
-### World of Warcraft 3.3.5a modding
+## World of Warcraft 3.3.5a modding
 
 ## AzerothCore Installation
 
-[Linux Guide](Linux-Installation/linux-install.html) _Step-by-step manual installation / Auto-install using Bash scripts_
+[Linux Guide](Linux-Installation/linux-install.html) _Step-by-step manual installation or installation using Bash script_
 
-[Windows Guide](docs/Windows-Installation/ReadMe.md) _Installation with WAMP/XAMPP_
+[Windows Guide](docs/Windows-Installation/ReadMe.md) _Installation for Windows_
 
 ## Tools
 

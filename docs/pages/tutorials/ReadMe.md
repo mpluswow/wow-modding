@@ -4,15 +4,22 @@
 
 [Linux Guide](Linux-Installation/linux-install.html) _Step-by-step manual installation or installation using Bash script_
 
-[Windows Guide](docs/Windows-Installation/ReadMe.md) _Installation for Windows_
+[Windows Guide](docs/Windows-Installation/ReadMe.md) _Step-by-step manual installation for Windows_
 
 ## Tools
 
 [Tools](docs/Tools/ReadMe.md) _Utilities and editors for modding_
 
-## Create Server Content
+## Introduction
 
 [Introduction](docs/Introduction/ReadMe.md) _Overview of creating content in AzerothCore_
+
+[DBC Editing](docs/DBC-Editing/ReadMe.md) _Client-side database structures and editing_
+
+[Eluna](docs/Eluna/ReadMe.md) _Lua scripting, hooks, and examples_
+
+
+## Create Server Content
 
 [Commands](docs/Commands/ReadMe.md) _Useful in-game and server-side commands_
 
@@ -24,11 +31,6 @@
 
 [Reputation](docs/Reputation/ReadMe.md) _Adding and modifying faction reputation_
 
-Advanced Topics
-
-[DBC Editing](docs/DBC-Editing/ReadMe.md) _Client-side database structures and editing_
-
-[Eluna](docs/Eluna/ReadMe.md) _Lua scripting, hooks, and examples_
 
 
 [Return Home](index.html)

@@ -1,7 +1,7 @@
-# 🧾 Discord Auction House Bot
+# Discord Auction House Bot
 
 This Eluna Lua script for **AzerothCore 3.3.5a** sends detailed auction listings directly to a Discord channel using a Webhook.  
-It’s great for letting your community see items listed at the in-game Auction House—live and in real time!
+It’s great for letting your community see items listed at the in-game Auction House — live and in real time!
 
 ---
 

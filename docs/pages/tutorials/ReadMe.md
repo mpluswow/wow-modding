@@ -26,10 +26,14 @@ Please make sure to follow best practices and keep formatting consistent.
 - [Windows Guide](docs/Windows-Installation/ReadMe.md)  
   _Step-by-step manual installation for Windows_
 
+---
+
 ## Tools
 
 - [Tools](docs/Tools/ReadMe.md)  
   _Utilities and editors for modding_
+
+---
 
 ## Introduction
 
@@ -41,6 +45,8 @@ Please make sure to follow best practices and keep formatting consistent.
 
 - [Eluna](docs/Eluna/ReadMe.md)  
   _Lua scripting, hooks, and examples_
+
+---
 
 ## Create Server Content
 

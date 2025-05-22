@@ -2,6 +2,8 @@
 
 This Eluna Lua script for **AzerothCore 3.3.5a** sends detailed auction listings directly to a Discord channel using a Webhook.  
 It’s great for letting your community see items listed at the in-game Auction House — live and in real time!
+
+
 This script uses [dkjson](http://dkolf.de/src/dkjson-lua.fsl/) to convert auction data into JSON for the Discord webhook.
 Make sure to include the `dkjson.lua` file in the same folder as AuctionBOT.lua.
 

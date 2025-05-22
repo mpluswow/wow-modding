@@ -1,7 +1,5 @@
 # AzerothCore & WoW 3.3.5a Modding Hub
 
-## About This Repository
-
 Welcome to the **World of Warcraft 3.3.5a Modding Hub**, a curated collection of guides, tools,
 and resources focused on **AzerothCore** — a powerful open-source game server framework based on TrinityCore.
 

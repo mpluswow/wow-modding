@@ -30,7 +30,7 @@ Please make sure to follow best practices and keep formatting consistent.
 - [Tools](docs/Tools/ReadMe.md)  
   _Utilities and editors for modding_
 
----
+
 
 ## Introduction
 ---
@@ -43,7 +43,7 @@ Please make sure to follow best practices and keep formatting consistent.
 - [Eluna](docs/Eluna/ReadMe.md)  
   _Lua scripting, hooks, and examples_
 
----
+
 
 ## Create Server Content
 ---
@@ -62,6 +62,6 @@ Please make sure to follow best practices and keep formatting consistent.
 - [Reputation](docs/Reputation/ReadMe.md)  
   _Adding and modifying faction reputation_
 
----
+
 
 [Return Home](index.html)

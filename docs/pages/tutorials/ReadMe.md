@@ -4,13 +4,13 @@ Tutorials
 
 [Return Home](index.html)
 
-##AzerothCore Installation
+## AzerothCore Installation
 
 [Linux Guide](Linux-Installation/linux-install.html) _Step-by-step manual installation / Auto-install using Bash scripts_
 
 [Windows Guide](docs/Windows-Installation/ReadMe.md) _Installation with WAMP/XAMPP_
 
-##Create Server Content
+## Create Server Content
 
 [Introduction](docs/Introduction/ReadMe.md) _Overview of creating content in AzerothCore_
 

@@ -1,3 +1,4 @@
+### World of Warcraft 3.3.5a modding
 
 ## AzerothCore Installation
 
@@ -5,11 +6,13 @@
 
 [Windows Guide](docs/Windows-Installation/ReadMe.md) _Installation with WAMP/XAMPP_
 
+## Tools
+
+[Tools](docs/Tools/ReadMe.md) _Utilities and editors for modding_
+
 ## Create Server Content
 
 [Introduction](docs/Introduction/ReadMe.md) _Overview of creating content in AzerothCore_
-
-[Tools](docs/Tools/ReadMe.md) _Utilities and editors for modding_
 
 [Commands](docs/Commands/ReadMe.md) _Useful in-game and server-side commands_
 

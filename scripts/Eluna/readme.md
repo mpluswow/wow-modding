@@ -5,29 +5,9 @@ Each folder includes a standalone module that can be placed into your lua_script
 Some scripts may include DBC or SQL changes, so be sure to check the included readme in each folder for setup details.
 These scripts are built to help customize gameplay, streamline server features, and add new systems to enhance the experience.
 
-
-## Script Index
-
-### [**AccountCreationBoost**](AccountCreationBoost)
-
-### [**DiscordAuctionBOT**](DiscordAuctionBOT)
-
-### [**GuildWars**](GuildWars)
-
-### [**RecruitFriend**](RecruitFriend)
-
-### [**RestZoneSpeed**](RestZoneSpeed)
-
-### [**TeleporterNPC**](TeleporterNPC)
-
-### [**Treasure Goblin**](Treasure%20Goblin)
-
-
-
 ## Requirements
 
 - Build AzerothCore with mod-eluna
-
 
 
 ## Notes

@@ -15,7 +15,14 @@ sudo ./ac-install.sh
 Important!
 
 Before You run it as a service complete AzerothCore database installation,
-run ```./worldserver``` and allow it to update Your database for the first time.
+run ```./worldserver``` in ```server/azerothcore/env/dist/bin/```.
+Allow AzerothCore to populate Your database and wait for it to finish.
+When database installation is finished kill worldserver by pressing ```ctrl+c``` and:
+
+```bash
+sudo systemctl start authserver
+sudo systemctl start worldserver
+```
 
 Your binaries are here:
 ```
@@ -31,8 +38,5 @@ server/azerothcore/env/dist/etc/modules
 ```
 
 
-```bash
-sudo systemctl restart authserver
-sudo systemctl restart worldserver
-```
+
 

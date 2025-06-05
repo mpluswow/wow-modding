@@ -75,10 +75,10 @@ echo
 declare -A MODULES=(
     ["mod-ah-bot"]="https://github.com/azerothcore/mod-ah-bot"
     ["mod-eluna"]="https://github.com/azerothcore/mod-eluna"
-	["mod-ip-tracker"]="https://github.com/azerothcore/mod-ip-tracker"
+    ["mod-ip-tracker"]="https://github.com/azerothcore/mod-ip-tracker"
     ["mod-1v1-arena"]="https://github.com/azerothcore/mod-1v1-arena"
     ["mod-transmog"]="https://github.com/azerothcore/mod-transmog"
-	["mod-npc-talent-template"]="https://github.com/azerothcore/mod-npc-talent-template"
+    ["mod-npc-talent-template"]="https://github.com/azerothcore/mod-npc-talent-template"
     ["mod-world-chat"]="https://github.com/azerothcore/mod-world-chat"
 )
 

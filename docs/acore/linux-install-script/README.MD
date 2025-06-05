@@ -16,8 +16,12 @@ Important!
 
 Before You run it as a service complete AzerothCore database installation,
 run ```./worldserver``` in ```server/azerothcore/env/dist/bin/```.
+
 Allow AzerothCore to populate Your database and wait for it to finish.
-When database installation is finished kill worldserver by pressing ```ctrl+c``` and:
+
+When database installation is finished kill worldserver by pressing ```ctrl+c```.
+
+Now start Services:
 
 ```bash
 sudo systemctl start authserver

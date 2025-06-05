@@ -73,22 +73,13 @@ step "Select which modules you want to install. Use space to select, then press 
 echo
 
 declare -A MODULES=(
-    ["mod-world-chat"]="https://github.com/azerothcore/mod-world-chat"
-    ["mod-ip-tracker"]="https://github.com/azerothcore/mod-ip-tracker"
-    ["mod-starter-guild"]="https://github.com/azerothcore/mod-starter-guild"
-    ["mod-1v1-arena"]="https://github.com/azerothcore/mod-1v1-arena"
-    ["mod-npc-buffer"]="https://github.com/azerothcore/mod-npc-buffer"
-    ["mod-weapon-visual"]="https://github.com/azerothcore/mod-weapon-visual"
-    ["mod-transmog"]="https://github.com/azerothcore/mod-transmog"
-    ["mod-breaking-news"]="https://github.com/azerothcore/mod-breaking-news-override"
     ["mod-ah-bot"]="https://github.com/azerothcore/mod-ah-bot"
     ["mod-eluna"]="https://github.com/azerothcore/mod-eluna"
-    ["mod-account-mounts"]="https://github.com/azerothcore/mod-account-mounts"
-    ["mod-npc-talent-template"]="https://github.com/azerothcore/mod-npc-talent-template"
-    ["mod-pocket-portal"]="https://github.com/azerothcore/mod-pocket-portal"
-    ["mod-npc-enchanter"]="https://github.com/azerothcore/mod-npc-enchanter"
-    ["mod-racial-trait-swap"]="https://github.com/azerothcore/mod-racial-trait-swap"
-    ["mod-weekend-xp"]="https://github.com/azerothcore/mod-weekend-xp"
+	["mod-ip-tracker"]="https://github.com/azerothcore/mod-ip-tracker"
+    ["mod-1v1-arena"]="https://github.com/azerothcore/mod-1v1-arena"
+    ["mod-transmog"]="https://github.com/azerothcore/mod-transmog"
+	["mod-npc-talent-template"]="https://github.com/azerothcore/mod-npc-talent-template"
+    ["mod-world-chat"]="https://github.com/azerothcore/mod-world-chat"
 )
 
 if command -v dialog &> /dev/null; then
@@ -221,16 +212,23 @@ sudo systemctl enable worldserver
 # Step 15: Final Message
 step "AzerothCore installation complete!
 
-To start your servers:
-  
-  sudo systemctl start  authserver && sudo systemctl start worldserver
+ Before You run it as a service complete AzerothCore database installation.
+ Run './worldserver' in `server/azerothcore/env/dist/bin/`.
+ Allow AzerothCore to populate Your database and wait for it to finish.
+ When database installation is finished kill worldserver using 'ctrl+c'.
+
+ Now start it as a Service:
+
+  sudo systemctl start authserver
+  sudo systemctl start worldserver
+
   
   AzertohCore Binaries here:
   
   ~/server/azerothcore/env/dist/bin/worldserver
   ~/server/azerothcore/env/dist/bin/authserver
 
-Edit authserver.conf and worldserver.conf files:
+ Edit authserver.conf and worldserver.conf files:
 
   ~/server/azerothcore/env/dist/etc/
 "

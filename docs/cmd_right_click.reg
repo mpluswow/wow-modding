@@ -1,0 +1,15 @@
+Windows Registry Editor Version 5.00
+
+; Add "Open with CMD" to directory context menu
+[HKEY_CLASSES_ROOT\Directory\Background\shell\OpenCMD]
+@="Open with CMD"
+"Icon"="cmd.exe"
+[HKEY_CLASSES_ROOT\Directory\Background\shell\OpenCMD\command]
+@="cmd.exe"
+
+; Add "Open with PowerShell" to directory context menu
+[HKEY_CLASSES_ROOT\Directory\Background\shell\OpenPowerShell]
+@="Open with PowerShell"
+"Icon"="powershell.exe"
+[HKEY_CLASSES_ROOT\Directory\Background\shell\OpenPowerShell\command]
+@="powershell.exe -NoExit -Command \"Set-Location -LiteralPath '%V'\""

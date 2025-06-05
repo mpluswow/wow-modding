@@ -1,6 +1,6 @@
 ## Table of Contents
 
-- [Tutourioals](tutorials/readme.md)  
+- [Tutourioals](docs/tutorials/ACore-Linux-Installation)  
   *Bash script to install AzerothCore with Modules*
 
 - [Eluna Scripts](tutorials/ReadMe.md)  

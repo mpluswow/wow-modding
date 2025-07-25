@@ -6,8 +6,8 @@ This Launcher have been coded using AI tools like ChatGPT.
 
 This is a Python-based game launcher coded featuring:
 
-* A **Tkinter**- GUI Interface
-* A **Flask**- API Backend
+* A **Tkinter** GUI Interface
+* A **Flask** API Backend
 * One-click build process into a standalone `.exe` or binary
 
 

@@ -10,7 +10,7 @@ This is a Python-based game launcher coded featuring:
 * A **Flask** API Backend
 * One-click build process into a standalone `.exe` or binary
 
-
+--
 
 ### Download and Install Python (3.10+ recommended)
 

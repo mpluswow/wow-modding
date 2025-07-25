@@ -1,29 +1,30 @@
 ## Game Launcher
+
 Full Installation Guide
 
 This Launcher have been coded using AI tools like ChatGPT.
 
 This is a Python-based game launcher coded featuring:
 
-* 🔹 A **Tkinter**- GUI Interface
-* 🔹 A **Flask**- API Backend
-* 🔹 One-click build process into a standalone `.exe` or binary
+* A **Tkinter**- GUI Interface
+* A **Flask**- API Backend
+* One-click build process into a standalone `.exe` or binary
 
 
-## 🚀 Step-by-Step Installation Instructions
+## Step-by-Step Installation Instructions
 
-### 1️⃣ Download and Install Python (3.10+ recommended)
+### Download and Install Python (3.10+ recommended)
 
-#### 🪟 Windows:
+#### Windows:
 
 * Go to: [https://www.python.org/downloads/](https://www.python.org/downloads/)
 * Download the latest **Python 3.x** version.
 * Run the installer:
 
-  * ✅ Check **“Add Python to PATH”** before clicking install.
-  * ✅ Choose “Install for all users” if available.
+  * Check **“Add Python to PATH”** before clicking install.
+  * Choose “Install for all users” if available.
 m. mm
-#### 🐧 Linux:
+#### Linux:
 
 ```bash
 sudo apt update && sudo apt install python3 python3-pip -y

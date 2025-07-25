@@ -1,6 +1,7 @@
 Game Launcher – Full Installation Guide
 
 This Launcher have been coded using AI tools like ChatGPT.
+
 This is a Python-based game launcher coded featuring:
 
 * 🔹 A **Tkinter**- GUI Interface

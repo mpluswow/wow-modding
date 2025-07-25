@@ -133,22 +133,3 @@ pyinstaller --noconfirm --onefile --windowed updater.py
 ```
 
 Make sure `updater.py` uses relative paths and avoids Windows-specific APIs if running on Linux.
-
----
-
-## One-Step Setup Script
-
-To make this easier, run the provided shell script:
-
-```bash
-chmod +x launcher.sh
-./launcher.sh
-```
-
-This script automates:
-
-* Python environment setup
-* Dependency installation
-* API server deployment
-* Configuration patching
-* Optional executable 

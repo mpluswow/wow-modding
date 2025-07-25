@@ -13,7 +13,7 @@ This is a Flask API + TKInter GUI based Python project.
 5) Build Executable
 
 
-Alternatively You can use a installation script that will make whole process even easier.
+Alternatively You can use this script to make whole process even easier.
 
 ''ssh
 ./launcher.sh

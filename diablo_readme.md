@@ -1,4 +1,4 @@
-#Game Launcher – Full Installation Guide
+Game Launcher – Full Installation Guide
 
 This is a Python-based game launcher coded using AI tools, featuring:
 

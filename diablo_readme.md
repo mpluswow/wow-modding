@@ -151,18 +151,4 @@ This script automates:
 * Dependency installation
 * API server deployment
 * Configuration patching
-* Optional executable build
-
----
-
-## Final Checklist
-
-| Task              | Status |
-| ----------------- | ------ |
-| Python installed  | ✅      |
-| Flask API running | ✅      |
-| GUI functional    | ✅      |
-| Config adjusted   | ✅      |
-| Build complete    | ✅      |
-
----
+* Optional executable 

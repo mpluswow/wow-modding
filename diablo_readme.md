@@ -1,4 +1,4 @@
----
+
 
 # ✅ GUI + API Game Launcher – Full Installation Guide
 
@@ -9,7 +9,6 @@ This is a modern Python-based game launcher featuring:
 * 🔹 Externalized configuration via `config.ini`
 * 🔹 One-click build process into a standalone `.exe` or binary
 
----
 
 ## 🚀 Step-by-Step Installation Instructions
 

@@ -1,4 +1,4 @@
-Game Launcher – Full Installation Guide
+## Game Launcher – Full Installation Guide
 
 This Launcher have been coded using AI tools like ChatGPT.
 
@@ -21,7 +21,7 @@ This is a Python-based game launcher coded featuring:
 
   * ✅ Check **“Add Python to PATH”** before clicking install.
   * ✅ Choose “Install for all users” if available.
-
+m. mm
 #### 🐧 Linux:
 
 ```bash

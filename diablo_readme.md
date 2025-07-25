@@ -32,7 +32,7 @@ sudo apt update && sudo apt install python3 python3-pip -y
 
 ---
 
-### 2️⃣ Install Required Python Packages
+### Install Required Python Packages
 
 Once Python is installed, install the required dependencies:
 
@@ -48,7 +48,7 @@ pip install -r requirements.txt
 
 ---
 
-### 3️⃣ Deploy the Flask API Server
+### Deploy the Flask API Server
 
 Inside the project folder, locate the Flask API script, typically named `api.py` or `server.py`.
 
@@ -66,11 +66,11 @@ You should see output like:
 
 This indicates the API is now serving requests locally.
 
-✅ **Leave this window open** — the GUI launcher communicates with this server.
+**Leave this window open** — the GUI launcher communicates with this server.
 
 ---
 
-### 4️⃣ Modify `config/config.ini`
+### Modify `config/config.ini`
 
 Edit the configuration file to suit your environment.
 
@@ -96,7 +96,7 @@ NEWS_ENDPOINT = {SERVER}/news
 
 ---
 
-### 5️⃣ Run the GUI Launcher
+### Run the GUI Launcher
 
 Simply run:
 

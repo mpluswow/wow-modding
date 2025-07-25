@@ -1,4 +1,5 @@
-## Game Launcher – Full Installation Guide
+## Game Launcher
+Full Installation Guide
 
 This Launcher have been coded using AI tools like ChatGPT.
 

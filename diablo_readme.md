@@ -1,2 +1,2 @@
-## Flask API & Tkinter GUI Launcher
+## GUI + API Game Launcher
 

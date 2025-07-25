@@ -1,6 +1,6 @@
-# ✅ GUI + API Game Launcher – Full Installation Guide
+#Game Launcher – Full Installation Guide
 
-This is a modern Python-based game launcher featuring:
+This is a Python-based game launcher coded using AI tools, featuring:
 
 * 🔹 A **Tkinter**- GUI Interface
 * 🔹 A **Flask**- API Backend

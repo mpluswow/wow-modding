@@ -92,7 +92,7 @@ UPDATE_ENDPOINT = {SERVER}/update
 NEWS_ENDPOINT = {SERVER}/news
 ```
 
-🛠️ **Tip:** Make sure all paths exist (especially `images/background.jpg` and `images/diablo.ico`).
+**Tip:** Make sure all paths exist (especially `images/background.jpg` and `images/diablo.ico`).
 
 ---
 
@@ -108,9 +108,9 @@ You should see the launcher window with background, icon, and any other visuals 
 
 ---
 
-## 🧱 Optional: Build Executable (.exe or binary)
+## Optional: Build Executable (.exe or binary)
 
-### 🪟 Windows – Using PyInstaller
+### Windows – Using PyInstaller
 
 Install PyInstaller:
 
@@ -124,9 +124,9 @@ Then build:
 pyinstaller --noconfirm --onefile --windowed --icon=images/diablo.ico --add-data "images;images" --add-data "config;config" updater.py
 ```
 
-📁 After build completes, your `.exe` will appear in the `dist/` folder.
+After build completes, your `.exe` will appear in the `dist/` folder.
 
-### 🐧 Linux – Build Binary
+### Linux – Build Binary
 
 ```bash
 pyinstaller --noconfirm --onefile --windowed updater.py
@@ -136,7 +136,7 @@ Make sure `updater.py` uses relative paths and avoids Windows-specific APIs if r
 
 ---
 
-## ⚙️ One-Step Setup Script
+## One-Step Setup Script
 
 To make this easier, run the provided shell script:
 
@@ -155,7 +155,7 @@ This script automates:
 
 ---
 
-## ✅ Final Checklist
+## Final Checklist
 
 | Task              | Status |
 | ----------------- | ------ |

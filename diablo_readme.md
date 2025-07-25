@@ -11,7 +11,6 @@ This is a Python-based game launcher coded featuring:
 * One-click build process into a standalone `.exe` or binary
 
 
-## Step-by-Step Installation Instructions
 
 ### Download and Install Python (3.10+ recommended)
 

@@ -1,7 +1,8 @@
 ## GUI + API Game Launcher
 
 This game launcher have been build using AI tools.
-It's a Flask API + TKInter GUI based Python project.
+
+This is a Flask API + TKInter GUI based Python project.
 
 ## Installation Instructions
 
